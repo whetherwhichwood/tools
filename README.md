@@ -17,6 +17,9 @@ Open to PM, product strategy, AI workflow, and product-ops work. Contact: hello@
 | Iteration and isolation | `gnhf`, `treehouse`, Git worktrees | Long-running improvement loops and isolated agent workspaces |
 | Artifact review | `lavish-axi`, `lavish-themes`, `lavish-publish-cf` | HTML artifacts, visual review, and publishing |
 | Instruction sync | Ruler | Shared rules and skills across agent surfaces |
+| Free PM companions | GitHub Projects, NotebookLM, Granola/Fathom, Amplitude/Mixpanel | Tracking, research, meeting capture, and product analytics inputs |
+
+See [`recommended-free-tools.md`](recommended-free-tools.md) for the free tools I would add around this stack.
 
 ## PM skills sample
 
