@@ -1,41 +1,44 @@
-# tools
+# AI-Assisted Product And Dev Workflow
 
-Shared tooling and skill libraries for Gritzo (OpenClaw) and Cursor workflows.
+This repo is a public snapshot of my AI-assisted product and development workflow: a small sample of PM skills, one case study artifact, and setup commands for agent-friendly CLI tools.
 
-## PM skills (`pm-skills/`)
+The full workflow has more private skills and experiments behind it. This repo is the shareable slice: enough to show how I think, structure product work, and connect PM artifacts to agentic development.
 
-**37 optimized product-management skills** — the canonical set for Slack slash commands via Gritzo.
+Open to PM, product strategy, AI workflow, and product-ops work. Contact: hello@griffinbaker.com.
 
-Gritzo loads them from a git clone (no copies inside the gritzo repo):
+## Stack snapshot
 
-```json5
-{
-  skills: {
-    load: {
-      extraDirs: ["C:\\Users\\<you>\\.openclaw\\workspace\\repos\\tools\\pm-skills\\skills"]
-    }
-  }
-}
-```
+| Layer | Tools | Role |
+|---|---|---|
+| Model and agent base | OpenRouter, Codex | Model access, workspace execution, skill testing |
+| PM workflow | PM skills | Intake, discovery, PRDs, stories, risk review, release readiness, case studies |
+| Agent shell options | OpenCode | Alternate CLI surface for testing skills and workflows |
+| Agent ergonomics | AXI tools, `gh-axi`, `chrome-devtools-axi` | GitHub and browser workflows designed for agents |
+| Iteration and isolation | `gnhf`, `treehouse`, Git worktrees | Long-running improvement loops and isolated agent workspaces |
+| Artifact review | `lavish-axi`, `lavish-themes`, `lavish-publish-cf` | HTML artifacts, visual review, and publishing |
+| Instruction sync | Ruler | Shared rules and skills across agent surfaces |
 
-After editing skills here, merge to GitHub, then in Slack: `/sync tools`.
+## PM skills sample
 
-### Commands (all use Codex via skill frontmatter)
+`pm-skills/` contains a sanitized sample of a larger PM skill library. It is intended for evaluation and sharing, not as the complete working set.
 
-| Domain | Skills |
-|--------|--------|
-| Intake & governance | `/triage`, `/risks`, `/charter`, `/decisions`, `/budget`, `/onboarding` |
-| Discovery | `/discovery`, `/assumptions`, `/experiments`, `/north-star` |
-| Requirements | `/prd`, `/stories`, `/okrs`, `/pre-mortem`, `/tech-review` |
-| Sprint & release | `/sprint`, `/sprint-report`, `/release-check`, `/release-notes`, `/retro` |
-| Communication & planning | `/stakeholder`, `/meeting`, `/roadmap`, `/prioritize` |
-| Strategy & market | `/strategy`, `/research`, `/gtm`, `/metrics` |
-| Analytics & specialties | `/analytics`, `/ship-check`, `/leadership`, `/pm` |
-| Measure, ship & monetize | `/synthesis`, `/feedback`, `/postmortem`, `/rollout`, `/pricing` |
+Included sample skills:
 
-See [`pm-skills/README.md`](pm-skills/README.md) for full descriptions.
+- `pm` - routes ambiguous product requests to the right skill
+- `triage` - turns messy intake into a structured PM summary
+- `discovery` - plans and synthesizes product discovery
+- `prd` - drafts a product requirements document
+- `stories` - breaks work into stories and acceptance criteria
+- `risks` - builds a scored risk register
+- `release-check` - runs go/no-go release readiness
+- `case-study` - captures what shipped, why it mattered, and what was learned
 
-## Repos
+See [`pm-skills/README.md`](pm-skills/README.md) for usage.
 
-- **Gritzo** (OpenClaw config + wrapper skills): [whetherwhichwood/gritzo](https://github.com/whetherwhichwood/gritzo)
-- **App repos**: `website`, `bingo`, etc.
+## Case study
+
+[`case-studies/helpflow-smart-assist.md`](case-studies/helpflow-smart-assist.md) is a prepared PM case study showing how the skills can turn a strategic AI add-on idea into a decision narrative, assumption map, validation plan, prioritization, PRD, roadmap, and launch framing.
+
+## Agentic tool setup
+
+[`setup-agentic-tools.sh`](setup-agentic-tools.sh) is a commands-only setup file for the `kunchenguid` AXI family and related agent workflow tools.

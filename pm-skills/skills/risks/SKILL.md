@@ -2,8 +2,6 @@
 name: risks
 description: Identifies, scores, and recommends responses for project risks at any phase. Use when someone asks to analyze risks, run a risk review, or wants to know what they should be tracking. Produces a scored risk register with owners, trigger signals, and responses, at a depth matched to the time available.
 argument-hint: <project context, phase, and known risks>
-user-invocable: true
-metadata: {"openclaw":{"model":"openai/gpt-5.5"}}
 ---
 
 ## What this does

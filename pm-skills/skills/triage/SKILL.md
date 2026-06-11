@@ -2,8 +2,6 @@
 name: triage
 description: Turns a vague, messy, or incomplete request into a structured, PM-ready intake summary with risks, gaps, and a recommended next step. Triggers on raw stakeholder messages, unclear feature requests, forwarded emails, or any ask that needs sorting out before discovery or planning begins.
 argument-hint: <raw message or request>
-user-invocable: true
-metadata: {"openclaw":{"model":"openai/gpt-5.5"}}
 ---
 
 ## What this does

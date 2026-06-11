@@ -1,28 +1,23 @@
-# PM Skills
+# PM Skills Sample
 
-A personal product management toolset: 37 self-contained skills covering the full product lifecycle, from intake through discovery, requirements, delivery, launch, and strategy.
+This is a sanitized public sample of a larger PM skill library. Treat `skills/<name>/SKILL.md` as the source for each included workflow.
 
 ## How it works
 
-Each skill lives in `skills/<name>/SKILL.md` with YAML frontmatter and a markdown body. Skills are tool-agnostic: paste them into any AI assistant (Claude, ChatGPT, Cursor), or invoke them as slash commands in Claude Code via the thin wrappers in `.claude/commands/`.
-
-When the user's request matches a skill's `description`, load that skill and follow it. If you are unsure which skill applies, read `skills/pm/SKILL.md` (the orchestrator) and let it route.
+When the user's request matches a skill description, load the matching `SKILL.md` and follow it. If the request is ambiguous, load `skills/pm/SKILL.md` first and let it route.
 
 ## Skill map
 
-| Domain | Skills |
+| Phase | Skills |
 |---|---|
-| Intake & governance | `triage`, `risks`, `charter`, `decisions`, `budget`, `onboarding` |
-| Discovery | `discovery`, `assumptions`, `experiments`, `north-star` |
-| Requirements | `prd`, `stories`, `okrs`, `pre-mortem`, `tech-review` |
-| Sprint & release | `sprint`, `sprint-report`, `release-check`, `release-notes`, `retro` |
-| Communication & planning | `stakeholder`, `meeting`, `roadmap`, `prioritize` |
-| Strategy & market | `strategy`, `research`, `gtm`, `metrics` |
-| Analytics & specialties | `analytics`, `ship-check`, `leadership`, `pm` |
-| Measure, ship & monetize | `synthesis`, `feedback`, `postmortem`, `rollout`, `pricing` |
+| Routing | `pm` |
+| Intake | `triage`, `risks` |
+| Discovery | `discovery` |
+| Requirements | `prd`, `stories` |
+| Release and learning | `release-check`, `case-study` |
 
 ## Conventions
 
-- Skills produce markdown by default. Output is meant to be pasted into your tool of choice (docs, tickets, slides).
-- Where a skill needs input it doesn't have, it asks one focused question rather than guessing.
-- Frameworks are referenced by name (RICE, OST, JTBD, OKR, Agile, etc.) so they're easy to look up.
+- Produce markdown by default.
+- Ask one focused question if required context is missing.
+- After finishing a skill, suggest the single best next skill and at most one alternative.

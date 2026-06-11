@@ -2,8 +2,6 @@
 name: discovery
 description: Plans and synthesizes product discovery — workshops, interviews, and opportunity mapping. Use when preparing for a discovery session, structuring research, or turning raw notes into findings. The goal is to understand the real problem before committing to a solution.
 argument-hint: <project context or session notes>
-user-invocable: true
-metadata: {"openclaw":{"model":"openai/gpt-5.5"}}
 ---
 
 ## What this does

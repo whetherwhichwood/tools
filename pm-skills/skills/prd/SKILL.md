@@ -2,8 +2,6 @@
 name: prd
 description: Writes a Product Requirements Document from discovery findings, a brief, or raw stakeholder input. A PRD defines what to build and why, giving the team a single agreed source of truth. Use after discovery and before stories or design begin.
 argument-hint: <discovery findings, charter, or feature brief>
-user-invocable: true
-metadata: {"openclaw":{"model":"openai/gpt-5.5"}}
 ---
 
 ## What this does
@@ -109,4 +107,4 @@ Stating what is NOT included is as important as what is.
 
 ## After generating
 
-Suggest running `pre-mortem` to stress-test the plan, then `stories` to break it into a backlog.
+Suggest the single best next skill and at most one alternative, then ask for confirmation before continuing. Default to `pre-mortem` if the plan is risky or high-stakes; default to `stories` if the PRD is ready to break into implementation work.

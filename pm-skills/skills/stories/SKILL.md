@@ -2,8 +2,6 @@
 name: stories
 description: Turns a PRD, feature description, or design into structured epics and stories with clean, testable acceptance criteria. Use to break work down, scope a feature, populate a backlog, or decide what to build first. Supports user story, job story, and Why-What-Acceptance formats.
 argument-hint: <PRD, feature description, or design>
-user-invocable: true
-metadata: {"openclaw":{"model":"openai/gpt-5.5"}}
 ---
 
 ## What this does
@@ -77,3 +75,9 @@ Present clean markdown ready to paste into your tracker. Create foundational sto
 - Surface assumptions — anything inferred becomes an open question with a named owner.
 - Never invent requirements — derive only from the input; if something's missing, ask.
 - AC must be testable as written. If a criterion needs interpretation, rewrite it.
+
+---
+
+## After generating
+
+Suggest the single best next step and at most one alternative, then ask for confirmation before continuing. Default to `sprint` when the team is planning capacity, `risks` when assumptions or dependencies are unresolved, or Build mode when the stories and acceptance criteria are ready to implement.

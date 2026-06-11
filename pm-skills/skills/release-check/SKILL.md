@@ -2,8 +2,6 @@
 name: release-check
 description: Runs a structured go/no-go assessment before a release. Evaluates readiness across feature completeness, testing, operations, communications, dependencies, and approvals, then gives a clear GO / NO-GO / CONDITIONAL GO verdict with a blocker list. Use before any production release — planned, hotfix, or phased rollout.
 argument-hint: <release details: name, type, date, scope, team>
-user-invocable: true
-metadata: {"openclaw":{"model":"openai/gpt-5.5"}}
 ---
 
 ## What this does
@@ -79,3 +77,9 @@ For each applicable category, list items with status (PASS/FAIL/RISK/N/A/UNCONFI
 
 #### Verdict
 **GO / NO-GO / CONDITIONAL GO** — [one sentence on the decisive factor.]
+
+---
+
+## After generating
+
+If the verdict is GO, suggest `rollout` or `release-notes` as the next operational step, or `case-study` if the work has already shipped and the user wants to capture learning. If the verdict is CONDITIONAL GO or NO-GO, suggest `risks` or `stakeholder` depending on whether the next need is mitigation or communication. Ask for confirmation before continuing.
